@@ -1,0 +1,1128 @@
+2025-03-20 10:47:40,350 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 20 10:47:40 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-20 10:47:42,504 | ERROR | Failed to load: class path resource [activemq.xml], reason: Line 27 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 27; columnNumber: 38; cvc-complex-type.2.4.a: Invalid content was found starting with element 'memoryUsage'. One of '{"http://activemq.apache.org/schema/core":deadLetterStrategy, "http://activemq.apache.org/schema/core":destination, "http://activemq.apache.org/schema/core":dispatchPolicy, "http://activemq.apache.org/schema/core":messageEvictionStrategy, "http://activemq.apache.org/schema/core":messageGroupMapFactory, "http://activemq.apache.org/schema/core":networkBridgeFilterFactory, "http://activemq.apache.org/schema/core":pendingDurableSubscriberPolicy, "http://activemq.apache.org/schema/core":pendingMessageLimitStrategy, "http://activemq.apache.org/schema/core":pendingQueuePolicy, "http://activemq.apache.org/schema/core":pendingSubscriberPolicy, "http://activemq.apache.org/schema/core":slowConsumerStrategy, "http://activemq.apache.org/schema/core":subscriptionRecoveryPolicy, WC[##other:"http://activemq.apache.org/schema/core"]}' is expected. | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 27 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 27; columnNumber: 38; cvc-complex-type.2.4.a: Invalid content was found starting with element 'memoryUsage'. One of '{"http://activemq.apache.org/schema/core":deadLetterStrategy, "http://activemq.apache.org/schema/core":destination, "http://activemq.apache.org/schema/core":dispatchPolicy, "http://activemq.apache.org/schema/core":messageEvictionStrategy, "http://activemq.apache.org/schema/core":messageGroupMapFactory, "http://activemq.apache.org/schema/core":networkBridgeFilterFactory, "http://activemq.apache.org/schema/core":pendingDurableSubscriberPolicy, "http://activemq.apache.org/schema/core":pendingMessageLimitStrategy, "http://activemq.apache.org/schema/core":pendingQueuePolicy, "http://activemq.apache.org/schema/core":pendingSubscriberPolicy, "http://activemq.apache.org/schema/core":slowConsumerStrategy, "http://activemq.apache.org/schema/core":subscriptionRecoveryPolicy, WC[##other:"http://activemq.apache.org/schema/core"]}' is expected.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:111)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:104)[xbean-spring-4.2.jar:4.2]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:515)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-4.2.jar:4.2]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.15.6.jar:5.15.6]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.15.6.jar:5.15.6]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.15.6.jar:5.15.6]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.15.6.jar:5.15.6]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.15.6.jar:5.15.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_181]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.15.6]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.15.6]
+2025-03-20 10:52:36,921 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 20 10:52:36 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-20 10:52:38,396 | ERROR | Failed to load: class path resource [activemq.xml], reason: Line 28 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 28; columnNumber: 38; cvc-complex-type.2.4.a: Invalid content was found starting with element 'memoryUsage'. One of '{"http://activemq.apache.org/schema/core":deadLetterStrategy, "http://activemq.apache.org/schema/core":destination, "http://activemq.apache.org/schema/core":dispatchPolicy, "http://activemq.apache.org/schema/core":messageEvictionStrategy, "http://activemq.apache.org/schema/core":messageGroupMapFactory, "http://activemq.apache.org/schema/core":networkBridgeFilterFactory, "http://activemq.apache.org/schema/core":pendingDurableSubscriberPolicy, "http://activemq.apache.org/schema/core":pendingMessageLimitStrategy, "http://activemq.apache.org/schema/core":pendingQueuePolicy, "http://activemq.apache.org/schema/core":pendingSubscriberPolicy, "http://activemq.apache.org/schema/core":slowConsumerStrategy, "http://activemq.apache.org/schema/core":subscriptionRecoveryPolicy, WC[##other:"http://activemq.apache.org/schema/core"]}' is expected. | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 28 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 28; columnNumber: 38; cvc-complex-type.2.4.a: Invalid content was found starting with element 'memoryUsage'. One of '{"http://activemq.apache.org/schema/core":deadLetterStrategy, "http://activemq.apache.org/schema/core":destination, "http://activemq.apache.org/schema/core":dispatchPolicy, "http://activemq.apache.org/schema/core":messageEvictionStrategy, "http://activemq.apache.org/schema/core":messageGroupMapFactory, "http://activemq.apache.org/schema/core":networkBridgeFilterFactory, "http://activemq.apache.org/schema/core":pendingDurableSubscriberPolicy, "http://activemq.apache.org/schema/core":pendingMessageLimitStrategy, "http://activemq.apache.org/schema/core":pendingQueuePolicy, "http://activemq.apache.org/schema/core":pendingSubscriberPolicy, "http://activemq.apache.org/schema/core":slowConsumerStrategy, "http://activemq.apache.org/schema/core":subscriptionRecoveryPolicy, WC[##other:"http://activemq.apache.org/schema/core"]}' is expected.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:111)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:104)[xbean-spring-4.2.jar:4.2]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:515)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-4.2.jar:4.2]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.15.6.jar:5.15.6]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.15.6.jar:5.15.6]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.15.6.jar:5.15.6]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.15.6.jar:5.15.6]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.15.6.jar:5.15.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_181]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.15.6]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.15.6]
+2025-03-20 10:56:19,350 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 20 10:56:19 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-20 10:56:21,043 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-20 10:56:21,108 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-20 10:56:21,424 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-20 10:56:21,582 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:d5c828d6182e-44689-1742468181445-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-20 10:56:21,608 | INFO  | Listening for connections at: tcp://d5c828d6182e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-20 10:56:21,609 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-20 10:56:21,610 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:d5c828d6182e-44689-1742468181445-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-20 10:56:21,610 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-20 10:56:51,728 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 20 10:56:51 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-20 10:56:53,582 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-20 10:56:53,647 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-20 10:56:53,758 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-20 10:56:53,800 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-20 10:56:53,984 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:2524a7e8c2cd-33701-1742468213826-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-20 10:56:54,041 | INFO  | Listening for connections at: tcp://2524a7e8c2cd:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-20 10:56:54,055 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-20 10:56:54,056 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:2524a7e8c2cd-33701-1742468213826-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-20 10:56:54,059 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-20 11:01:32,159 | WARN  | Transport Connection to: tcp://192.168.143.2:56826 failed: java.io.IOException: Unknown data type: 47 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.143.2:56826@61616
+2025-03-20 11:01:33,200 | WARN  | Transport Connection to: tcp://192.168.143.2:56824 failed: java.io.IOException: Unknown data type: 47 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.143.2:56824@61616
+2025-03-20 11:02:03,210 | WARN  | Transport Connection to: tcp://192.168.143.2:56842 failed: org.apache.activemq.transport.InactivityIOException: Channel was inactive (no connection attempt made) for too (>30000) long: tcp://192.168.143.2:56842 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ InactivityMonitor Worker
+2025-03-20 11:02:03,211 | WARN  | Transport Connection to: tcp://192.168.143.2:56846 failed: org.apache.activemq.transport.InactivityIOException: Channel was inactive (no connection attempt made) for too (>30000) long: tcp://192.168.143.2:56846 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ InactivityMonitor Worker
+2025-03-20 11:11:52,983 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 20 11:11:52 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-20 11:11:54,522 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-20 11:11:55,031 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-20 11:11:55,038 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-20 11:11:55,114 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-20 11:11:55,342 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-20 11:11:55,462 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-20 11:11:55,829 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-20 11:11:55,896 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-20 11:11:56,052 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-20 11:11:56,087 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-20 11:11:56,236 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:5f73c084bc8f-45495-1742469116103-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-20 11:11:56,260 | INFO  | Listening for connections at: tcp://5f73c084bc8f:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-20 11:11:56,261 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-20 11:11:56,269 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:5f73c084bc8f-45495-1742469116103-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-20 11:11:56,276 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-20 11:14:02,046 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 20 11:14:02 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-20 11:14:07,396 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-20 11:14:10,158 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-20 11:14:10,176 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-20 11:14:10,604 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-20 11:14:11,543 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-20 11:14:12,379 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-20 11:14:13,429 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-20 11:14:13,608 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-20 11:14:13,967 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-20 11:14:14,234 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-20 11:14:14,594 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:df2a889c6ba2-33043-1742469254305-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-20 11:14:14,954 | INFO  | Listening for connections at: tcp://df2a889c6ba2:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-20 11:14:14,975 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-20 11:14:14,978 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:df2a889c6ba2-33043-1742469254305-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-20 11:14:14,991 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-20 12:07:01,147 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 20 12:07:01 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-20 12:07:02,933 | ERROR | Failed to load: class path resource [activemq.xml], reason: Line 57 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 57; columnNumber: 29; cvc-complex-type.2.4.a: Invalid content was found starting with element 'blobTransferPolicy'. One of '{"http://activemq.apache.org/schema/core":adminView, "http://activemq.apache.org/schema/core":brokerContext, "http://activemq.apache.org/schema/core":consumerSystemUsage, "http://activemq.apache.org/schema/core":destinationFactory, "http://activemq.apache.org/schema/core":destinationInterceptors, "http://activemq.apache.org/schema/core":destinationPolicy, "http://activemq.apache.org/schema/core":destinations, "http://activemq.apache.org/schema/core":ioExceptionHandler, "http://activemq.apache.org/schema/core":jmsBridgeConnectors, "http://activemq.apache.org/schema/core":jobSchedulerStore, "http://activemq.apache.org/schema/core":managementContext, "http://activemq.apache.org/schema/core":messageAuthorizationPolicy, "http://activemq.apache.org/schema/core":networkConnectorURIs, "http://activemq.apache.org/schema/core":networkConnectors, "http://activemq.apache.org/schema/core":persistenceAdapter, "http://activemq.apache.org/schema/core":persistenceFactory, "http://activemq.apache.org/schema/core":persistenceTaskRunnerFactory, "http://activemq.apache.org/schema/core":plugins, "http://activemq.apache.org/schema/core":producerSystemUsage, "http://activemq.apache.org/schema/core":proxyConnectors, "http://activemq.apache.org/schema/core":regionBroker, "http://activemq.apache.org/schema/core":services, "http://activemq.apache.org/schema/core":shutdownHooks, "http://activemq.apache.org/schema/core":sslContext, "http://activemq.apache.org/schema/core":startException, "http://activemq.apache.org/schema/core":systemUsage, "http://activemq.apache.org/schema/core":taskRunnerFactory, "http://activemq.apache.org/schema/core":tempDataStore, "http://activemq.apache.org/schema/core":transportConnectorURIs, "http://activemq.apache.org/schema/core":transportConnectors, WC[##other:"http://activemq.apache.org/schema/core"]}' is expected. | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 57 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 57; columnNumber: 29; cvc-complex-type.2.4.a: Invalid content was found starting with element 'blobTransferPolicy'. One of '{"http://activemq.apache.org/schema/core":adminView, "http://activemq.apache.org/schema/core":brokerContext, "http://activemq.apache.org/schema/core":consumerSystemUsage, "http://activemq.apache.org/schema/core":destinationFactory, "http://activemq.apache.org/schema/core":destinationInterceptors, "http://activemq.apache.org/schema/core":destinationPolicy, "http://activemq.apache.org/schema/core":destinations, "http://activemq.apache.org/schema/core":ioExceptionHandler, "http://activemq.apache.org/schema/core":jmsBridgeConnectors, "http://activemq.apache.org/schema/core":jobSchedulerStore, "http://activemq.apache.org/schema/core":managementContext, "http://activemq.apache.org/schema/core":messageAuthorizationPolicy, "http://activemq.apache.org/schema/core":networkConnectorURIs, "http://activemq.apache.org/schema/core":networkConnectors, "http://activemq.apache.org/schema/core":persistenceAdapter, "http://activemq.apache.org/schema/core":persistenceFactory, "http://activemq.apache.org/schema/core":persistenceTaskRunnerFactory, "http://activemq.apache.org/schema/core":plugins, "http://activemq.apache.org/schema/core":producerSystemUsage, "http://activemq.apache.org/schema/core":proxyConnectors, "http://activemq.apache.org/schema/core":regionBroker, "http://activemq.apache.org/schema/core":services, "http://activemq.apache.org/schema/core":shutdownHooks, "http://activemq.apache.org/schema/core":sslContext, "http://activemq.apache.org/schema/core":startException, "http://activemq.apache.org/schema/core":systemUsage, "http://activemq.apache.org/schema/core":taskRunnerFactory, "http://activemq.apache.org/schema/core":tempDataStore, "http://activemq.apache.org/schema/core":transportConnectorURIs, "http://activemq.apache.org/schema/core":transportConnectors, WC[##other:"http://activemq.apache.org/schema/core"]}' is expected.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:111)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:104)[xbean-spring-4.2.jar:4.2]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:515)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-4.2.jar:4.2]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.15.6.jar:5.15.6]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.15.6.jar:5.15.6]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.15.6.jar:5.15.6]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.15.6.jar:5.15.6]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.6.jar:5.15.6]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.15.6.jar:5.15.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_181]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.15.6]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.15.6]
+2025-03-20 12:29:14,872 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 20 12:29:14 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-20 12:29:16,690 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-20 12:29:17,393 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-20 12:29:17,398 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-20 12:29:17,516 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-20 12:29:17,745 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-20 12:29:17,994 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-20 12:29:18,520 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-20 12:29:18,629 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-20 12:29:18,907 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-20 12:29:18,962 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-20 12:29:19,125 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:2f2e965c36ac-39329-1742473758987-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-20 12:29:19,263 | INFO  | Listening for connections at: tcp://2f2e965c36ac:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-20 12:29:19,264 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-20 12:29:19,265 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:2f2e965c36ac-39329-1742473758987-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-20 12:29:19,265 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-21 05:28:18,104 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Fri Mar 21 05:28:18 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-21 05:28:20,661 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-21 05:28:21,126 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-21 05:28:21,127 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-21 05:28:21,217 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-21 05:28:21,600 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-21 05:28:21,676 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-21 05:28:22,116 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-21 05:28:22,161 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-21 05:28:22,390 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-21 05:28:22,547 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-21 05:28:22,869 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:f3a758c2c0d7-33821-1742534902588-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-21 05:28:22,923 | INFO  | Listening for connections at: tcp://f3a758c2c0d7:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-21 05:28:22,924 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-21 05:28:22,926 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:f3a758c2c0d7-33821-1742534902588-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-21 05:28:22,928 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-21 05:29:26,479 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-17
+2025-03-21 05:31:49,091 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Fri Mar 21 05:31:49 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-21 05:31:50,461 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-21 05:31:50,715 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-21 05:31:50,716 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-21 05:31:50,794 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-21 05:31:51,028 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-21 05:31:51,071 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-21 05:31:51,343 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-21 05:31:51,447 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-21 05:31:51,526 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-21 05:31:51,562 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-21 05:31:51,761 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:5623509800d6-46367-1742535111573-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-21 05:31:51,795 | INFO  | Listening for connections at: tcp://5623509800d6:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-21 05:31:51,796 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-21 05:31:51,797 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:5623509800d6-46367-1742535111573-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-21 05:31:51,797 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-21 05:36:08,041 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-19
+2025-03-22 02:45:02,492 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Sat Mar 22 02:45:02 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-22 02:45:03,743 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-22 02:45:04,026 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-22 02:45:04,026 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-22 02:45:04,110 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-22 02:45:04,327 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-22 02:45:04,388 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-22 02:45:04,619 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-22 02:45:04,656 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-22 02:45:04,762 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-22 02:45:04,792 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-22 02:45:04,960 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:94b82b6f7abf-34105-1742611504800-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-22 02:45:04,977 | INFO  | Listening for connections at: tcp://94b82b6f7abf:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-22 02:45:04,977 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-22 02:45:04,978 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:94b82b6f7abf-34105-1742611504800-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-22 02:45:04,978 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-22 02:45:37,611 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-48
+2025-03-22 06:05:14,689 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Sat Mar 22 06:05:14 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-22 06:05:16,220 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-22 06:05:16,569 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-22 06:05:16,570 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-22 06:05:16,665 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-22 06:05:17,001 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-22 06:05:17,092 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-22 06:05:17,413 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-22 06:05:17,457 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-22 06:05:17,657 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-22 06:05:17,773 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-22 06:05:18,146 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:365724bcf7fa-42573-1742623517801-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-22 06:05:18,209 | INFO  | Listening for connections at: tcp://365724bcf7fa:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-22 06:05:18,212 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-22 06:05:18,214 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:365724bcf7fa-42573-1742623517801-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-22 06:05:18,216 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-22 06:05:54,783 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-17
+2025-03-22 06:09:43,667 | WARN  |  | org.eclipse.jetty.servlet.ServletHandler | qtp726379593-18
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)[spring-webmvc-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)[spring-webmvc-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)[tomcat-servlet-api-8.0.53.jar:]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)[spring-webmvc-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)[tomcat-servlet-api-8.0.53.jar:]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:201)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)[activemq-web-5.15.6.jar:5.15.6]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)[spring-web-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)[spring-web-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:102)[file:/opt/apache-activemq-5.15.6/webapps/admin/WEB-INF/classes/:]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:542)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:542)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.Server.handle(Server.java:499)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:258)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_181]
+2025-03-22 07:08:03,141 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Sat Mar 22 07:08:03 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-22 07:08:08,128 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-22 07:08:09,041 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-22 07:08:09,042 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-22 07:08:09,241 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-22 07:08:10,247 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-22 07:08:10,469 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-22 07:08:11,273 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-22 07:08:11,490 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-22 07:08:12,044 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-22 07:08:12,411 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-22 07:08:12,856 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:6010a5926e8b-41869-1742627292459-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-22 07:08:13,021 | INFO  | Listening for connections at: tcp://6010a5926e8b:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-22 07:08:13,031 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-22 07:08:13,035 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:6010a5926e8b-41869-1742627292459-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-22 07:08:13,038 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-22 07:09:05,981 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-16
+2025-03-22 09:13:04,315 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Sat Mar 22 09:13:04 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-22 09:13:10,602 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-22 09:13:11,977 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-22 09:13:11,988 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-22 09:13:12,227 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-22 09:13:13,147 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-22 09:13:13,321 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-22 09:13:14,169 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-22 09:13:14,277 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-22 09:13:14,674 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-22 09:13:14,801 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-22 09:13:15,188 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:6010a5926e8b-36251-1742634794840-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-22 09:13:15,265 | INFO  | Listening for connections at: tcp://6010a5926e8b:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-22 09:13:15,267 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-22 09:13:15,275 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:6010a5926e8b-36251-1742634794840-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-22 09:13:15,277 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-22 09:13:29,857 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-18
+2025-03-22 09:16:46,972 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Sat Mar 22 09:16:46 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-22 09:16:48,924 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-22 09:16:49,950 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-22 09:16:49,952 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-22 09:16:50,146 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-22 09:16:51,097 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-22 09:16:51,329 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-22 09:16:52,274 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-22 09:16:52,479 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-22 09:16:52,820 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-22 09:16:52,975 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-22 09:16:53,395 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:e2f4a876791c-33517-1742635013020-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-22 09:16:53,503 | INFO  | Listening for connections at: tcp://e2f4a876791c:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-22 09:16:53,516 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-22 09:16:53,524 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:e2f4a876791c-33517-1742635013020-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-22 09:16:53,526 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-25 11:53:08,577 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Tue Mar 25 11:53:08 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-25 11:53:09,962 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-25 11:53:10,347 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-25 11:53:10,347 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-25 11:53:10,399 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-25 11:53:10,745 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-25 11:53:10,798 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-25 11:53:11,043 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-25 11:53:11,075 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-25 11:53:11,304 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-25 11:53:11,338 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-25 11:53:11,522 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:83ac2df8563e-42203-1742903591347-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-25 11:53:11,534 | INFO  | Listening for connections at: tcp://83ac2df8563e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-25 11:53:11,535 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-25 11:53:11,535 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:83ac2df8563e-42203-1742903591347-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-25 11:53:11,535 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-25 11:55:49,409 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-17
+2025-03-26 05:18:53,193 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Wed Mar 26 05:18:53 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-26 05:18:59,427 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-26 05:19:00,472 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-26 05:19:00,479 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-26 05:19:00,680 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-26 05:19:01,773 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-26 05:19:02,095 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-26 05:19:03,067 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-26 05:19:03,240 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-26 05:19:03,596 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-26 05:19:03,719 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-26 05:19:04,140 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:dbc117e917bb-40357-1742966343756-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-26 05:19:04,251 | INFO  | Listening for connections at: tcp://dbc117e917bb:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-26 05:19:04,254 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-26 05:19:04,256 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:dbc117e917bb-40357-1742966343756-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-26 05:19:04,258 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-26 05:20:18,660 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-18
+2025-03-26 05:49:53,664 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Wed Mar 26 05:49:53 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-26 05:49:55,629 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-26 05:49:56,033 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-26 05:49:56,035 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-26 05:49:56,114 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-26 05:49:56,441 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-26 05:49:56,528 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-26 05:49:56,800 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-26 05:49:56,877 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-26 05:49:57,131 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-26 05:49:57,186 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-26 05:49:57,459 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-36465-1742968197218-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-26 05:49:57,475 | INFO  | Listening for connections at: tcp://ab16928e3f0e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-26 05:49:57,476 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-26 05:49:57,477 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-36465-1742968197218-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-26 05:49:57,478 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:05:38,253 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Wed Mar 26 06:05:38 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-26 06:05:39,441 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-26 06:05:39,683 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-26 06:05:39,684 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-26 06:05:39,741 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-26 06:05:39,899 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-26 06:05:39,942 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-26 06:05:40,153 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:05:40,171 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-26 06:05:40,309 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-26 06:05:40,354 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-26 06:05:40,552 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-46491-1742969140362-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:05:40,587 | INFO  | Listening for connections at: tcp://ab16928e3f0e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-26 06:05:40,587 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-26 06:05:40,588 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-46491-1742969140362-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:05:40,588 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:06:16,185 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-17
+2025-03-26 06:08:04,516 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Wed Mar 26 06:08:04 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-26 06:08:06,135 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-26 06:08:06,622 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-26 06:08:06,623 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-26 06:08:06,700 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-26 06:08:07,033 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-26 06:08:07,091 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-26 06:08:11,022 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:08:11,038 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-26 06:08:11,285 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-26 06:08:11,350 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-26 06:08:11,581 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-43865-1742969291361-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:08:11,593 | INFO  | Listening for connections at: tcp://ab16928e3f0e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-26 06:08:11,594 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-26 06:08:11,595 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-43865-1742969291361-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:08:11,595 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:09:04,915 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-17
+2025-03-26 06:59:27,517 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Wed Mar 26 06:59:27 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-26 06:59:29,516 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-26 06:59:30,149 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-26 06:59:30,151 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-26 06:59:30,248 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-26 06:59:30,610 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-26 06:59:30,724 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-26 06:59:31,014 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:59:31,060 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-26 06:59:31,281 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-26 06:59:31,363 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-26 06:59:31,581 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-37863-1742972371381-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:59:31,615 | INFO  | Listening for connections at: tcp://ab16928e3f0e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-26 06:59:31,635 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-26 06:59:31,635 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-37863-1742972371381-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-26 06:59:31,636 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-26 11:04:52,311 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-19
+2025-03-27 04:33:16,815 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 27 04:33:16 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 04:33:19,538 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 04:33:20,218 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 04:33:20,219 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 04:33:20,332 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 04:33:20,781 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 04:33:20,886 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 04:33:21,241 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 04:33:21,439 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 04:33:21,589 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 04:33:21,655 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 04:33:21,893 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-42011-1743050001671-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 04:33:21,932 | INFO  | Listening for connections at: tcp://ab16928e3f0e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 04:33:21,933 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 04:33:21,934 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-42011-1743050001671-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 04:33:21,934 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:04:58,301 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 27 05:04:58 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 05:05:01,064 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 05:05:01,762 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 05:05:01,763 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 05:05:01,916 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 05:05:02,497 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 05:05:02,605 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 05:05:03,020 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:05:03,142 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 05:05:03,366 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 05:05:03,593 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 05:05:03,855 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-34079-1743051903622-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:05:03,898 | INFO  | Listening for connections at: tcp://ab16928e3f0e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 05:05:03,901 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 05:05:03,902 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-34079-1743051903622-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:05:03,903 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:22:44,376 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 27 05:22:44 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 05:22:47,095 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 05:22:47,795 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 05:22:47,801 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 05:22:47,962 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 05:22:48,434 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 05:22:48,520 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 05:22:48,997 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:22:49,061 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 05:22:49,200 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 05:22:49,318 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 05:22:49,560 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-39487-1743052969347-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:22:49,603 | INFO  | Listening for connections at: tcp://ab16928e3f0e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 05:22:49,604 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 05:22:49,605 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-39487-1743052969347-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:22:49,606 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:24:34,047 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 27 05:24:34 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 05:24:37,228 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 05:24:38,037 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 05:24:38,039 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 05:24:38,184 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 05:24:38,752 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 05:24:38,837 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 05:24:39,287 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:24:39,349 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 05:24:39,524 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 05:24:39,595 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 05:24:39,870 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-33163-1743053079620-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:24:39,925 | INFO  | Listening for connections at: tcp://ab16928e3f0e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 05:24:39,927 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 05:24:39,929 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-33163-1743053079620-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:24:39,930 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:25:11,245 | WARN  |  | org.eclipse.jetty.servlet.ServletHandler | qtp726379593-17
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)[spring-webmvc-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)[spring-webmvc-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)[tomcat-servlet-api-8.0.53.jar:]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)[spring-webmvc-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)[tomcat-servlet-api-8.0.53.jar:]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:201)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)[activemq-web-5.15.6.jar:5.15.6]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)[spring-web-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)[spring-web-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:102)[file:/opt/apache-activemq-5.15.6/webapps/admin/WEB-INF/classes/:]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:542)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:542)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.Server.handle(Server.java:499)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:258)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)[jetty-all-9.2.25.v20180606.jar:9.2.25.v20180606]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_181]
+2025-03-27 05:28:25,216 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 27 05:28:25 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 05:28:27,695 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 05:28:28,481 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 05:28:28,482 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 05:28:28,624 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 05:28:29,106 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 05:28:29,227 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 05:28:29,741 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:28:29,815 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 05:28:29,982 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 05:28:30,074 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 05:28:30,381 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-43545-1743053310123-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:28:30,437 | INFO  | Listening for connections at: tcp://ab16928e3f0e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 05:28:30,438 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 05:28:30,440 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-43545-1743053310123-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:28:30,442 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 05:50:03,062 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp726379593-17
+2025-03-27 06:02:01,712 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6e06451e: startup date [Thu Mar 27 06:02:01 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 06:02:05,212 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 06:02:06,054 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 06:02:06,055 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 06:02:06,224 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 06:02:06,882 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 06:02:07,045 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 06:02:07,459 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:02:07,551 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 06:02:08,119 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 06:02:08,214 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 06:02:08,554 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-33295-1743055328272-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:02:08,612 | INFO  | Listening for connections at: tcp://ab16928e3f0e:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 06:02:08,613 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 06:02:08,614 | INFO  | Apache ActiveMQ 5.15.6 (localhost, ID:ab16928e3f0e-33295-1743055328272-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:02:08,615 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:13:12,368 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 06:13:12 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 06:13:14,443 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 06:13:14,883 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 06:13:14,893 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 06:13:14,988 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 06:13:15,313 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 06:13:15,373 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 06:13:15,653 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:13:15,712 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 06:13:15,862 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 06:13:15,883 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 06:13:15,912 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 06:13:16,244 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 06:13:16,486 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:d035b2e02880-40865-1743055996269-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:13:16,511 | INFO  | Listening for connections at: tcp://d035b2e02880:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 06:13:16,512 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 06:13:16,516 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:d035b2e02880-40865-1743055996269-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:13:16,517 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:31:30,157 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 06:31:30 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 06:31:32,325 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 06:31:32,746 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 06:31:32,750 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 06:31:32,843 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 06:31:33,243 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 06:31:33,349 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 06:31:33,833 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:31:33,867 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 06:31:34,228 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 06:31:34,261 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 06:31:34,325 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 06:31:35,586 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 06:31:35,859 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:d035b2e02880-36199-1743057095617-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:31:35,899 | INFO  | Listening for connections at: tcp://d035b2e02880:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 06:31:35,902 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 06:31:35,903 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:d035b2e02880-36199-1743057095617-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:31:35,903 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:57:19,574 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 06:57:19 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 06:57:22,709 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 06:57:23,167 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 06:57:23,168 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 06:57:23,267 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 06:57:23,783 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 06:57:23,903 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 06:57:24,531 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:57:24,710 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 06:57:25,062 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 06:57:25,081 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 06:57:25,112 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 06:57:25,614 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 06:57:25,906 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:c8b7aba652a3-35483-1743058645640-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:57:25,949 | INFO  | Listening for connections at: tcp://c8b7aba652a3:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 06:57:25,953 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 06:57:25,960 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:c8b7aba652a3-35483-1743058645640-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 06:57:25,961 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:00:12,600 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 08:00:12 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 08:00:14,157 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 08:00:14,403 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:00:14,404 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:00:14,456 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 08:00:14,644 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 08:00:14,698 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 08:00:14,923 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:00:14,967 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 08:00:15,104 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:00:15,116 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 08:00:15,141 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:00:15,446 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 08:00:15,654 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:06dd898043a6-39671-1743062415460-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:00:15,682 | INFO  | Listening for connections at: tcp://06dd898043a6:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 08:00:15,683 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 08:00:15,685 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:06dd898043a6-39671-1743062415460-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:00:15,686 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:13:38,322 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 08:13:38 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 08:13:39,712 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 08:13:39,944 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:13:39,944 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:13:39,995 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 08:13:40,229 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 08:13:40,319 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 08:13:40,527 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:13:40,569 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 08:13:40,732 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:13:40,738 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 08:13:40,756 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:13:41,003 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 08:13:41,195 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:4d4b21540ed3-45317-1743063221017-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:13:41,220 | INFO  | Listening for connections at: tcp://4d4b21540ed3:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 08:13:41,221 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 08:13:41,221 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:4d4b21540ed3-45317-1743063221017-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:13:41,222 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:33:26,755 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 08:33:26 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 08:33:28,370 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 08:33:28,679 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:33:28,680 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:33:28,745 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 08:33:29,002 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 08:33:29,043 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 08:33:29,287 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:33:29,330 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 08:33:29,481 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:33:29,490 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 08:33:29,519 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:33:29,833 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 08:33:30,058 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:d8f7fa6155b9-46747-1743064409859-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:33:30,086 | INFO  | Listening for connections at: tcp://d8f7fa6155b9:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 08:33:30,087 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 08:33:30,087 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:d8f7fa6155b9-46747-1743064409859-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:33:30,088 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:38:45,372 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 08:38:45 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 08:38:46,951 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 08:38:47,272 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:38:47,273 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:38:47,336 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 08:38:47,596 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 08:38:47,656 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 08:38:47,906 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:38:47,935 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 08:38:48,111 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:38:48,118 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 08:38:48,141 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:38:48,499 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 08:38:48,711 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:288ff8fe51cc-40327-1743064728515-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:38:48,740 | INFO  | Listening for connections at: tcp://288ff8fe51cc:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 08:38:48,741 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 08:38:48,742 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:288ff8fe51cc-40327-1743064728515-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:38:48,742 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:41:58,116 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 08:41:58 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 08:41:59,569 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 08:41:59,813 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:41:59,814 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:41:59,875 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 08:42:00,075 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 08:42:00,122 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 08:42:00,383 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:42:00,430 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 08:42:00,613 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:42:00,616 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 08:42:00,639 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:42:00,936 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 08:42:01,141 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5b6f96bcc5f9-39261-1743064920951-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:42:01,170 | INFO  | Listening for connections at: tcp://5b6f96bcc5f9:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 08:42:01,171 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 08:42:01,171 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5b6f96bcc5f9-39261-1743064920951-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:42:01,172 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:47:49,384 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 08:47:49 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 08:47:51,660 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 08:47:52,466 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:47:52,467 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 08:47:52,562 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 08:47:53,250 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 08:47:53,350 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 08:47:53,829 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:47:53,893 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 08:47:54,148 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:47:54,156 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 08:47:54,192 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 08:47:54,665 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 08:47:54,920 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5b6f96bcc5f9-42199-1743065274694-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:47:54,954 | INFO  | Listening for connections at: tcp://5b6f96bcc5f9:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 08:47:54,956 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 08:47:54,957 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5b6f96bcc5f9-42199-1743065274694-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:47:54,958 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 08:48:35,187 | WARN  | Failed to add Connection id=ID:0a1f86642fea-35841-1743065315067-1:1, clientId=client123 due to {} | org.apache.activemq.broker.TransportConnection | ActiveMQ Transport: tcp:///172.27.0.5:43912@61616
+javax.jms.InvalidClientIDException: Broker: localhost - Client: client123 already connected from tcp://172.27.0.4:44556
+	at org.apache.activemq.broker.region.RegionBroker.addConnection(RegionBroker.java:247)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.broker.jmx.ManagedRegionBroker.addConnection(ManagedRegionBroker.java:227)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.broker.BrokerFilter.addConnection(BrokerFilter.java:99)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.advisory.AdvisoryBroker.addConnection(AdvisoryBroker.java:119)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.broker.BrokerFilter.addConnection(BrokerFilter.java:99)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.broker.BrokerFilter.addConnection(BrokerFilter.java:99)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.broker.BrokerFilter.addConnection(BrokerFilter.java:99)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.broker.TransportConnection.processAddConnection(TransportConnection.java:849)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.broker.jmx.ManagedTransportConnection.processAddConnection(ManagedTransportConnection.java:77)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.command.ConnectionInfo.visit(ConnectionInfo.java:139)[activemq-client-5.15.9.jar:5.15.9]
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:336)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:200)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)[activemq-client-5.15.9.jar:5.15.9]
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)[activemq-client-5.15.9.jar:5.15.9]
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)[activemq-client-5.15.9.jar:5.15.9]
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)[activemq-client-5.15.9.jar:5.15.9]
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)[activemq-client-5.15.9.jar:5.15.9]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)[activemq-client-5.15.9.jar:5.15.9]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_212]
+2025-03-27 08:48:37,190 | INFO  | Stopping tcp://172.27.0.5:43912 because Failed with SecurityException: Broker: localhost - Client: client123 already connected from tcp://172.27.0.4:44556 | org.apache.activemq.broker.TransportConnection | ActiveMQ BrokerService[localhost] Task-2
+2025-03-27 11:49:22,927 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 11:49:22 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 11:49:26,024 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 11:49:26,708 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 11:49:26,709 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 11:49:26,837 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 11:49:27,415 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 11:49:27,524 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 11:49:27,896 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 11:49:27,991 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 11:49:28,297 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 11:49:28,332 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 11:49:28,349 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 11:49:28,950 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 11:49:29,189 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5b6f96bcc5f9-37209-1743076168972-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 11:49:29,225 | INFO  | Listening for connections at: tcp://5b6f96bcc5f9:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 11:49:29,226 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 11:49:29,227 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5b6f96bcc5f9-37209-1743076168972-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 11:49:29,228 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:02:19,003 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp2012744708-17
+2025-03-27 12:02:57,806 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 12:02:57 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 12:03:00,619 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 12:03:01,056 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 12:03:01,057 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 12:03:01,149 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 12:03:01,585 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 12:03:01,679 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 12:03:02,152 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:03:02,240 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 12:03:02,635 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 12:03:02,648 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 12:03:02,672 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 12:03:03,257 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 12:03:03,581 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:25d0d5c20555-34171-1743076983278-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:03:03,614 | INFO  | Listening for connections at: tcp://25d0d5c20555:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 12:03:03,616 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 12:03:03,617 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:25d0d5c20555-34171-1743076983278-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:03:03,617 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:13:52,782 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 12:13:52 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 12:13:55,618 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 12:13:56,351 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 12:13:56,352 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 12:13:56,473 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 12:13:56,947 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 12:13:57,040 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 12:13:57,561 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:13:57,640 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 12:13:57,894 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 12:13:57,911 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 12:13:57,945 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 12:13:58,518 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 12:13:58,804 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:25d0d5c20555-43089-1743077638547-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:13:58,859 | INFO  | Listening for connections at: tcp://25d0d5c20555:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 12:13:58,862 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 12:13:58,863 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:25d0d5c20555-43089-1743077638547-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:13:58,864 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:15:33,432 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 12:15:33 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 12:15:36,190 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 12:15:37,081 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 12:15:37,086 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 12:15:37,278 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 12:15:37,921 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 12:15:38,038 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 12:15:38,553 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:15:38,628 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 12:15:38,891 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 12:15:38,916 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 12:15:38,934 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 12:15:39,511 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 12:15:39,838 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:25d0d5c20555-45533-1743077739551-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:15:39,883 | INFO  | Listening for connections at: tcp://25d0d5c20555:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 12:15:39,886 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 12:15:39,887 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:25d0d5c20555-45533-1743077739551-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:15:39,888 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:17:43,464 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Thu Mar 27 12:17:43 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-27 12:17:45,470 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-27 12:17:45,819 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 12:17:45,820 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-27 12:17:45,904 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-27 12:17:46,168 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-27 12:17:46,226 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-27 12:17:46,544 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:17:46,571 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-27 12:17:46,747 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 12:17:46,751 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-27 12:17:46,812 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-27 12:17:47,174 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-27 12:17:47,428 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:c8df6918f945-36695-1743077867203-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:17:47,466 | INFO  | Listening for connections at: tcp://c8df6918f945:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-27 12:17:47,467 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-27 12:17:47,468 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:c8df6918f945-36695-1743077867203-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-27 12:17:47,469 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 04:38:48,931 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 04:38:48 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 04:38:51,159 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 04:38:51,792 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 04:38:51,794 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 04:38:51,898 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 04:38:52,219 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 04:38:52,318 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 04:38:52,627 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 04:38:52,684 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 04:38:52,911 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 04:38:52,924 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 04:38:52,970 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 04:38:53,312 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 04:38:53,553 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:c8df6918f945-38267-1743136733335-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 04:38:53,588 | INFO  | Listening for connections at: tcp://c8df6918f945:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 04:38:53,590 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 04:38:53,593 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:c8df6918f945-38267-1743136733335-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 04:38:53,594 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 04:55:00,304 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 04:55:00 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 04:55:02,042 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 04:55:02,446 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 04:55:02,448 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 04:55:02,515 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 04:55:02,794 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 04:55:02,841 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 04:55:03,141 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 04:55:03,212 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 04:55:03,311 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 04:55:03,319 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 04:55:03,356 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 04:55:03,718 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 04:55:03,939 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:202d51f68297-43895-1743137703733-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 04:55:03,962 | INFO  | Listening for connections at: tcp://202d51f68297:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 04:55:03,963 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 04:55:03,964 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:202d51f68297-43895-1743137703733-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 04:55:03,964 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:20:45,610 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 05:20:45 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 05:20:46,738 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 05:20:46,952 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:20:46,953 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:20:46,997 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 05:20:47,183 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 05:20:47,213 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 05:20:47,379 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:20:47,431 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 05:20:47,521 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:20:47,529 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 05:20:47,548 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:20:47,737 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 05:20:47,908 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:45924587a722-35415-1743139247751-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:20:47,932 | INFO  | Listening for connections at: tcp://45924587a722:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 05:20:47,935 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 05:20:47,936 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:45924587a722-35415-1743139247751-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:20:47,937 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:21:50,345 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 05:21:50 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 05:21:51,576 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 05:21:51,861 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:21:51,864 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:21:51,912 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 05:21:52,096 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 05:21:52,134 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 05:21:52,314 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:21:52,373 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 05:21:52,455 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:21:52,461 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 05:21:52,477 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:21:52,704 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 05:21:52,877 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:45924587a722-43081-1743139312716-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:21:52,896 | INFO  | Listening for connections at: tcp://45924587a722:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 05:21:52,897 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 05:21:52,897 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:45924587a722-43081-1743139312716-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:21:52,898 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:27:48,746 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 05:27:48 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 05:27:49,887 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 05:27:50,083 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:27:50,084 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:27:50,128 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 05:27:50,297 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 05:27:50,336 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 05:27:50,540 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:27:50,587 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 05:27:50,691 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:27:50,701 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 05:27:50,713 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:27:50,999 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 05:27:51,167 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:fb76d89cd1c7-35485-1743139671011-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:27:51,181 | INFO  | Listening for connections at: tcp://fb76d89cd1c7:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 05:27:51,181 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 05:27:51,182 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:fb76d89cd1c7-35485-1743139671011-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:27:51,182 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:29:01,652 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 05:29:01 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 05:29:02,719 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 05:29:03,023 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:29:03,030 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:29:03,091 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 05:29:03,404 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 05:29:03,464 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 05:29:03,674 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:29:03,702 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 05:29:03,821 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:29:03,827 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 05:29:03,858 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:29:04,043 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 05:29:04,232 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:fb76d89cd1c7-32817-1743139744057-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:29:04,251 | INFO  | Listening for connections at: tcp://fb76d89cd1c7:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 05:29:04,252 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 05:29:04,252 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:fb76d89cd1c7-32817-1743139744057-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:29:04,252 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:29:38,574 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp2012744708-19
+2025-03-28 05:31:10,481 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 05:31:10 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 05:31:11,541 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 05:31:11,753 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:31:11,754 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:31:11,791 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 05:31:11,948 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 05:31:11,987 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 05:31:12,144 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:31:12,170 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 05:31:12,271 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:31:12,282 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 05:31:12,300 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:31:12,495 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 05:31:12,699 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:743b4002ddb5-43769-1743139872509-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:31:12,722 | INFO  | Listening for connections at: tcp://743b4002ddb5:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 05:31:12,723 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 05:31:12,723 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:743b4002ddb5-43769-1743139872509-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:31:12,724 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:34:15,416 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 05:34:15 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 05:34:16,499 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 05:34:16,708 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:34:16,712 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:34:16,768 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 05:34:16,943 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 05:34:16,977 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 05:34:17,181 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:34:17,228 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 05:34:17,389 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:34:17,397 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 05:34:17,413 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:34:17,622 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 05:34:17,807 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:3f6a85ec13cc-37839-1743140057633-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:34:17,824 | INFO  | Listening for connections at: tcp://3f6a85ec13cc:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 05:34:17,825 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 05:34:17,826 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:3f6a85ec13cc-37839-1743140057633-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:34:17,826 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:36:18,397 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp2012744708-19
+2025-03-28 05:46:13,591 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 05:46:13 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 05:46:13,948 | ERROR | Failed to load: class path resource [activemq.xml], reason: Line 72 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 72; columnNumber: 47; cvc-complex-type.2.4.a: Invalid content was found starting with element 'policyEntry'. One of '{"http://activemq.apache.org/schema/core":compositeDestinations, "http://activemq.apache.org/schema/core":properties, WC[##other:"http://activemq.apache.org/schema/core"]}' is expected. | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 72 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 72; columnNumber: 47; cvc-complex-type.2.4.a: Invalid content was found starting with element 'policyEntry'. One of '{"http://activemq.apache.org/schema/core":compositeDestinations, "http://activemq.apache.org/schema/core":properties, WC[##other:"http://activemq.apache.org/schema/core"]}' is expected.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:111)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:104)[xbean-spring-4.2.jar:4.2]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:515)[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-4.2.jar:4.2]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.15.9.jar:5.15.9]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.15.9.jar:5.15.9]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.15.9.jar:5.15.9]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.15.9.jar:5.15.9]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.15.9.jar:5.15.9]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.9.jar:5.15.9]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.15.9.jar:5.15.9]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.9.jar:5.15.9]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.15.9.jar:5.15.9]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_212]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_212]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_212]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_212]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.15.9]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.15.9]
+2025-03-28 05:47:49,074 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 05:47:49 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 05:47:49,776 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 05:47:49,969 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:47:49,970 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:47:49,998 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 05:47:50,096 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 05:47:50,138 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 05:47:50,247 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:47:50,261 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 05:47:50,351 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:47:50,355 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 05:47:50,369 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:47:50,507 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 05:47:50,665 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:421d3aa9a0c9-44737-1743140870517-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:47:50,684 | INFO  | Listening for connections at: tcp://421d3aa9a0c9:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 05:47:50,685 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 05:47:50,685 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:421d3aa9a0c9-44737-1743140870517-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:47:50,686 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:48:57,419 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 05:48:57 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 05:48:58,491 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 05:48:58,688 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:48:58,689 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 05:48:58,726 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 05:48:58,846 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 05:48:58,910 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 05:48:59,141 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:48:59,162 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 05:48:59,272 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:48:59,282 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 05:48:59,295 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 05:48:59,518 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 05:48:59,695 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:3dc8ffbe7e9d-42843-1743140939529-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:48:59,722 | INFO  | Listening for connections at: tcp://3dc8ffbe7e9d:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 05:48:59,723 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 05:48:59,724 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:3dc8ffbe7e9d-42843-1743140939529-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 05:48:59,724 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 06:06:09,815 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp1491755116-17
+2025-03-28 06:45:44,897 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 06:45:44 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 06:45:46,360 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 06:45:46,610 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 06:45:46,611 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 06:45:46,660 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 06:45:46,882 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 06:45:46,948 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 06:45:47,204 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 06:45:47,270 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 06:45:47,476 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 06:45:47,483 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 06:45:47,501 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 06:45:47,763 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 06:45:47,960 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5c695b3db969-36797-1743144347775-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 06:45:47,982 | INFO  | Listening for connections at: tcp://5c695b3db969:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 06:45:47,983 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 06:45:47,984 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5c695b3db969-36797-1743144347775-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 06:45:47,984 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 06:47:30,707 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp2012744708-18
+2025-03-28 07:13:05,386 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 07:13:05 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 07:13:06,574 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 07:13:06,844 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 07:13:06,846 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 07:13:06,913 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 07:13:07,126 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 07:13:07,164 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 07:13:07,342 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 07:13:07,366 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 07:13:07,507 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 07:13:07,516 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 07:13:07,528 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 07:13:07,722 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 07:13:07,896 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5c695b3db969-41601-1743145987732-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 07:13:07,912 | INFO  | Listening for connections at: tcp://5c695b3db969:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 07:13:07,913 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 07:13:07,914 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5c695b3db969-41601-1743145987732-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 07:13:07,914 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-03-28 07:41:01,056 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Fri Mar 28 07:41:01 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-03-28 07:41:02,149 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-03-28 07:41:02,387 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 07:41:02,389 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-03-28 07:41:02,431 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-03-28 07:41:02,597 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-03-28 07:41:02,636 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-03-28 07:41:02,849 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-03-28 07:41:02,888 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-03-28 07:41:03,120 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 07:41:03,125 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-03-28 07:41:03,139 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-03-28 07:41:03,381 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-03-28 07:41:03,620 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5c695b3db969-35915-1743147663394-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-03-28 07:41:03,640 | INFO  | Listening for connections at: tcp://5c695b3db969:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-03-28 07:41:03,641 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-03-28 07:41:03,642 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5c695b3db969-35915-1743147663394-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-03-28 07:41:03,643 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-04-01 09:59:08,692 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Tue Apr 01 09:59:08 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-04-01 09:59:10,570 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-04-01 09:59:11,026 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-04-01 09:59:11,027 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-04-01 09:59:11,149 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-04-01 09:59:11,455 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-04-01 09:59:11,498 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-04-01 09:59:13,547 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-04-01 09:59:13,575 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-04-01 09:59:13,856 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-04-01 09:59:13,873 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-04-01 09:59:13,890 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-04-01 09:59:14,200 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-04-01 09:59:14,474 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5c695b3db969-34125-1743501554214-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-04-01 09:59:14,502 | INFO  | Listening for connections at: tcp://5c695b3db969:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-04-01 09:59:14,510 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-04-01 09:59:14,511 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:5c695b3db969-34125-1743501554214-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-04-01 09:59:14,512 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2025-04-21 12:08:33,458 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Mon Apr 21 12:08:33 UTC 2025]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2025-04-21 12:08:38,541 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2025-04-21 12:08:39,477 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-04-21 12:08:39,483 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2025-04-21 12:08:39,722 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2025-04-21 12:08:40,384 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2025-04-21 12:08:40,565 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2025-04-21 12:08:41,806 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2025-04-21 12:08:42,096 | INFO  | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi | org.apache.activemq.broker.jmx.ManagementContext | JMX connector
+2025-04-21 12:08:42,625 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-04-21 12:08:42,663 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2025-04-21 12:08:42,715 | INFO  | Page File: /opt/activemq/data/kahadb/db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2025-04-21 12:08:44,970 | INFO  | PListStore:[/opt/activemq/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2025-04-21 12:08:45,461 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:b44610f9aed3-38523-1745237325024-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2025-04-21 12:08:45,542 | INFO  | Listening for connections at: tcp://b44610f9aed3:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2025-04-21 12:08:45,556 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2025-04-21 12:08:45,558 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:b44610f9aed3-38523-1745237325024-0:1) started | org.apache.activemq.broker.BrokerService | main
+2025-04-21 12:08:45,559 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main

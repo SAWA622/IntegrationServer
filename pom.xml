@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <parent>
+    <groupId>com.tietoevry.teis</groupId>
+    <artifactId>parent</artifactId>
+    <version>4.0-snapshot</version>
+    <relativePath>parent/pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>teis</artifactId>
+  <version>4.0-snapshot</version>
+  <packaging>pom</packaging>
+  <name>teis</name>
+  <modules>
+    <module>common</module>
+    <module>process-engine</module>
+    <module>parent</module>
+    <module>core</module>
+  </modules>
+  <dependencyManagement>
+    <dependencies>
+      
+    </dependencies>
+  </dependencyManagement>
+</project>

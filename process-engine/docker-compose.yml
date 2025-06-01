@@ -1,0 +1,80 @@
+version: '3.9'
+services:
+  pe-server:
+    build: ./server
+    image: pe-server:1.0
+    container_name: pe-server
+    ports:
+      - 8070:8070
+    environment:
+      INFINISPAN_HOST: infinispan
+      INFINISPAN_PORT: 11222
+      INFINISPAN_USERNAME: admin
+      INFINISPAN_PASSWORD: password
+      ACTIVEMQ_BROKER_URL: tcp://activemq:61616
+      INFINISPAN_CACHE_NAME: TaskCache
+    volumes:
+      - C:/Teis4.0:/usr/teis4.0
+    depends_on:
+      infinispan:
+        condition: service_healthy
+    networks:
+      - teis-pe-network
+
+   
+
+  infinispan:
+    image: infinispan/server:14.0
+    container_name: infinispan
+    ports:
+      - "11222:11222"
+    environment:
+      USER: admin
+      PASS: password
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11222"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    
+    volumes:
+      - ./infinispan/data:/usr/teis4.0/infinispan/data
+      - ./infinispan/conf/infinispan.xml:/opt/infinispan/server/conf/infinispan.xml
+    networks:
+      - teis-pe-network
+      
+  activemq:
+    image: rmohr/activemq:5.15.9
+    container_name: activemq
+    ports:
+      - "61616:61616"
+      - "8161:8161"
+    volumes:
+      - ./active-mq/data:/opt/activemq/data  # Persist ActiveMQ data
+      - ./active-mq/conf/activemq.xml:/opt/activemq/conf/activemq.xml  # Custom configuration
+    healthcheck:
+       test: ["CMD", "curl", "-f", "http://localhost:8161"]
+       interval: 10s
+       timeout: 5s
+       retries: 10
+    networks:
+      - teis-pe-network
+
+  message-writer:
+      build: ./message-writer  
+      image: message-writer:1.0
+      ports:
+       - "8071:8071"
+      container_name: message-writer
+      depends_on:
+        activemq:
+          condition: service_healthy
+      networks:
+        - teis-pe-network
+      environment:
+         ACTIVEMQ_BROKER_URL: "tcp://activemq:61616"
+         TEIS_JMS_LOGQUEUE: "teisLogQueue"
+
+networks:
+  teis-pe-network:
+    driver: bridge

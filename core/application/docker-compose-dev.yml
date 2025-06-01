@@ -1,0 +1,136 @@
+version: '3.9'
+
+services:
+  scheduler:
+   build: ./scheduler
+   image: scheduler:1.0
+   container_name: scheduler
+   ports:
+     - "8081:8081"
+   env_file:
+     - dev.env
+   environment:
+     - SPRING_LIQUIBASE_ENABLED=true
+     - SPRING_LIQUIBASE_CHANGE_LOG=classpath:/db/changelog/db.changelog-master.yaml
+     - SPRING_LIQUIBASE_DEFAULT_SCHEMA=accessManagerDb
+     - SPRING_LIQUIBASE_USER=TeisAmAdmin
+     - SPRING_LIQUIBASE_PASSWORD=t5!SA%c@Mr
+     - SPRING_LIQUIBASE_URL=jdbc:mariadb://mariadb:3308/accessManagerDb
+     - SPRING_DATASOURCE_USERNAME=TeisAmAdmin
+     - SPRING_DATASOURCE_PASSWORD=t5!SA%c@Mr
+     - SPRING_LIQUIBASE_DROP_FIRST=false
+     - SPRING_LIQUIBASE_CONTEXTS=dev
+     - SPRING_JPA_HIBERNATE_DDL_AUTO=none
+   depends_on:
+     mariadb:
+       condition: service_healthy
+     elasticsearch:
+       condition: service_healthy
+   networks:
+     - teis-core-network
+   logging:
+     driver: "json-file"
+     options:
+       max-size: "10m"
+       max-file: "3"
+
+  mariadb:
+   image: mariadb:10.8
+   command: ["mysqld", "--port=3308"]
+   container_name: mariadb
+   ports:
+     - "3308:3308"
+   environment:
+     - MARIADB_ROOT_PASSWORD=root123
+     - MARIADB_DATABASE=accessManagerDb
+     - MARIADB_USER=TeisAmAdmin
+     - MARIADB_PASSWORD=t5!SA%c@Mr
+   volumes:
+     - ./mariadb/data:/var/lib/mysql
+     - ./mariadb/init-reference.sql:/docker-entrypoint-initdb.d/init.sql
+     - ./mariadb/custom.cnf:/etc/mysql/conf.d/custom.cnf:ro
+   healthcheck:
+     test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-P", "3308", "-u", "root", "-proot123"]
+     interval: 10s
+     timeout: 5s
+     retries: 10
+   networks:
+     - teis-core-network
+
+
+  elasticsearch:
+    image: elasticsearch:8.9.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+     - esdata:/usr/share/elasticsearch/data  #at last of this file configured
+     # - ./esdata:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    healthcheck:
+     test: ["CMD-SHELL", "curl -s http://localhost:9200/_cluster/health | grep -q '\"status\":\"green\"' || exit 1"]
+     interval: 30s
+     timeout: 30s
+     retries: 10
+     start_period: 60s 
+    networks:
+      - teis-core-network
+
+  logstash:
+    image: logstash:8.9.0
+    container_name: logstash
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    ports:
+      - "5044:5044"
+      - "5000:5000"
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    depends_on:
+      - elasticsearch
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9600"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - teis-core-network
+
+  kibana:
+    image: kibana:8.9.0
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+      KIBANA_DEFAULTAPPID: "discover"
+      KIBANA_TELEMETRY_OPTIN: "false"
+      KIBANA_TELEMETRY_ENABLED: "false"
+      KIBANA_DEFAULTINDEX: "scheduler-logs-*"
+    depends_on:
+      - elasticsearch
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5601"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - teis-core-network
+
+networks:
+  teis-core-network:
+    driver: bridge
+
+volumes:
+  esdata:
+    driver: local

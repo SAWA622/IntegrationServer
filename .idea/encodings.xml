@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/common/httpConnector/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/mqConnector/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/utilities/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/valueObject/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/shared/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/process-engine/message-writer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/process-engine/server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/process-engine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/process-engine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

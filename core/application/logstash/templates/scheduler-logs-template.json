@@ -1,0 +1,65 @@
+{
+  "index_patterns": ["scheduler-logs-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1,
+      "index.lifecycle.name": "logstash-policy",
+      "index.lifecycle.rollover_alias": "scheduler-logs"
+    },
+    "mappings": {
+      "dynamic": true,
+      "dynamic_templates": [
+        {
+          "strings_as_keyword": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword"
+            }
+          }
+        }
+      ],
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "@version": {
+          "type": "keyword"
+        },
+        "message": {
+          "type": "text"
+        },
+        "level": {
+          "type": "keyword"
+        },
+        "logger_name": {
+          "type": "keyword"
+        },
+        "thread_name": {
+          "type": "keyword"
+        },
+        "service": {
+          "type": "keyword"
+        },
+        "host": {
+          "type": "keyword"
+        },
+        "exception": {
+          "type": "text"
+        },
+        "stack_trace": {
+          "type": "text"
+        }
+      }
+    },
+    "aliases": {
+      "scheduler-logs": {}
+    }
+  },
+  "priority": 100,
+  "_meta": {
+    "description": "Template for Scheduler application logs",
+    "created_by": "sawant_anand",
+    "version": "1.0"
+  }
+}
